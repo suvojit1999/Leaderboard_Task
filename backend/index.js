@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000
 //   methods: ['POST', 'GET']
 // }))
 app.use(cors({
-  origin: ['https://66f19154bbdedf45b77ac287--leaderboardtask123.netlify.app/'],
+  origin: ['https://reliable-rabanadas-1e97c2.netlify.app/'],
   methods: ['POST', 'GET']
 }))
 

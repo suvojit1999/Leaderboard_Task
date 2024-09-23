@@ -17,7 +17,7 @@ const History = () => {
 
         try {
             // const response = await fetch(`http://localhost:3000/getHistory/${params.id}`);
-            const response = await fetch(`https://leaderboard-task-beta.vercel.app/getHistory/${params.id}`);
+            const response = await fetch(`https://leaderboard-task-backend.onrender.com/getHistory/${params.id}`);
             const { history, user } = await response.json();
 
             if (response.ok) {

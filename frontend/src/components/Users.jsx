@@ -12,7 +12,7 @@ const Users = ({ allUsers }) => {
     const ClaimPoints = async (id) => {
         try{
             // const response = await fetch(`http://localhost:3000/claimPoints/${id}`)
-            const response = await fetch(`https://leaderboard-task-beta.vercel.app/claimPoints/${id}`)
+            const response = await fetch(`https://leaderboard-task-backend.onrender.com/claimPoints/${id}`)
             const data = await response.json()
             console.log(data)
 
