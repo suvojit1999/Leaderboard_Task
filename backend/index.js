@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import api from "./api/claimPoints.js"
 import 'dotenv/config'
+const axios = require('axios');
+
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -25,16 +27,19 @@ app.get('/', (req, res) => {
 
 
 //to keep the render server awake
-const siteUrl = "https://leaderboard-task-backend.onrender.com/"
-const interval = 30000
+const siteUrl = "https://leaderboard-task-backend.onrender.com/";
+const interval = 30000; // 30 seconds
+
 function reloadWebsite() {
-  app.get(siteUrl).then(response => {
-    console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
-  })
+  axios.get(siteUrl)
+    .then(response => {
+      console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
+    })
     .catch(error => {
       console.error(`Error reloading at ${new Date().toISOString()}:`, error.message);
     });
 }
+
 setInterval(reloadWebsite, interval);
 
 
