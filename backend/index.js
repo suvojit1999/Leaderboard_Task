@@ -10,10 +10,11 @@ const port = process.env.PORT || 3000
 //   origin: ['http://localhost:5173'],
 //   methods: ['POST', 'GET']
 // }))
-app.use(cors({
-  origin: ['https://reliable-rabanadas-1e97c2.netlify.app/'],
-  methods: ['POST', 'GET']
-}))
+// app.use(cors({
+//   origin: ['https://reliable-rabanadas-1e97c2.netlify.app/'],
+//   methods: ['POST', 'GET']
+// }))
+app.use(cors())
 
 app.use(express.json())
 app.use('/', api)
