@@ -52,7 +52,7 @@ router.get('/claimPoints/:id', async (req, res) => {
                 const responseHistory = await newUserHistory.save()  //add to history
 
                 console.log(responseHistory)
-                return res.status(200).json({message: `Congratulations! You Climed ${randNum} Points`})
+                return res.status(200).json({message: `Congratulations! ${randNum} Points are claimed`})
 
             } catch (err) {
                 console.log(err)
