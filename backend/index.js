@@ -6,8 +6,12 @@ const app = express()
 const port = process.env.PORT || 3000
 
 
+// app.use(cors({
+//   origin: ['http://localhost:5173'],
+//   methods: ['POST', 'GET']
+// }))
 app.use(cors({
-  origin: ['http://localhost:5173'],
+  origin: ['https://66f19154bbdedf45b77ac287--leaderboardtask123.netlify.app/'],
   methods: ['POST', 'GET']
 }))
 

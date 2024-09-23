@@ -25,7 +25,8 @@ function App() {
 
 
   const getAllUsers = async () => {
-    const response = await fetch("http://localhost:3000/getData")
+    // const response = await fetch("http://localhost:3000/getData")
+    const response = await fetch("https://leaderboard-task-beta.vercel.app/getData")
     const data = await response.json();
     setAllUsers(data);
     console.log(data)
