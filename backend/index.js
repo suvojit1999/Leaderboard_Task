@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import api from "./api/claimPoints.js"
 import 'dotenv/config'
-const axios = require('axios');
+import axios from 'axios';
 
 const app = express()
 const port = process.env.PORT || 3000
